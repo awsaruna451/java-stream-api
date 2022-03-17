@@ -11,6 +11,8 @@ public class TerminalOperation01 {
         int max = list.stream().max(Comparator.comparing(i-> i)).get(); // max value
         double avg = list.stream().mapToDouble(i->i).average().getAsDouble();  // average
 
+        List<Integer> distinctValue = list.stream().distinct().collect(Collectors.toList());
+
         System.out.println(min);
 
     }
